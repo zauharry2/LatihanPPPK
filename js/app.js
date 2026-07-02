@@ -287,27 +287,26 @@ function updateGrid(){
 
 function updateScore(){
 
-    let nilai = 0;
+    let nilai=0;
 
-    answers.forEach(function(a,index){
+    soal.forEach((q,index)=>{
 
-        if(a === soal[index].benar){
-            nilai += 5;
+        if(answers[index]===q.benar){
+
+            nilai+=CONFIG.SKOR_BENAR;
+
         }
 
     });
 
-    // Simpan nilai ke variabel global jika ada
-    score = nilai;
-
-    // Hanya tampilkan saat mode belajar
-    if(mode === "belajar"){
-        el.score.textContent = nilai;
-    }else{
-        el.score.textContent = "---";
-    }
+   if(mode === "belajar"){
+    el.score.textContent = nilai;
+}else{
+    el.score.textContent = "---";
+}
 
 }
+
 /* ==========================================================
    UPDATE PROGRESS
 ========================================================== */
