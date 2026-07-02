@@ -287,19 +287,21 @@ function updateGrid(){
 
 function updateScore(){
 
-    let nilai=0;
+    let nilai = 0;
 
-    soal.forEach((q,index)=>{
+    soal.forEach(function(q,index){
 
-        if(answers[index]===q.benar){
-
-            nilai+=CONFIG.SKOR_BENAR;
-
+        if(answers[index] === q.benar){
+            nilai += CONFIG.SKOR_BENAR;
         }
 
     });
 
-    el.score.textContent=nilai;
+    if(mode === "belajar"){
+        el.score.textContent = nilai;
+    }else{
+        el.score.textContent = "---";
+    }
 
 }
 
@@ -553,7 +555,7 @@ function showFeedback(){
 ========================================================== */
 
 document.getElementById("startBtn").onclick = function(){
-
+console.log("examStarted =", examStarted);
     if(examStarted) return;
 
     startExam();
