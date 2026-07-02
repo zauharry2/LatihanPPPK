@@ -789,9 +789,7 @@ document.getElementById("backResultBtn").onclick=function(){
 ========================================================== */
 
 function restartExam(){
-document.querySelector(".container").classList.remove("fullscreen");
 
-document.getElementById("sidebar").style.display = "block";
     resetExam();
 
     soal = [];
@@ -800,7 +798,9 @@ document.getElementById("sidebar").style.display = "block";
     current = 0;
     examStarted = false;
 
-    document.getElementById("sidebar").style.display = "block";
+   document.querySelector(".container").classList.remove("fullscreen");
+
+document.getElementById("sidebar").style.display = "block";
 
     el.resultPage.style.display = "none";
     el.reviewPage.style.display = "none";
