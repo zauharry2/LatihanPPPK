@@ -785,7 +785,7 @@ document.getElementById("backResultBtn").onclick=function(){
 ========================================================== */
 
 function restartExam(){
-
+document.getElementById("sidebar").style.display = "block";
     resetExam();
 
     buildExam();
