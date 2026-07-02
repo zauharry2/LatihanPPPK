@@ -242,8 +242,23 @@ input[type=text]{
     margin:30px auto;
 }
 
-#reviewContainer{
-    width:100%;
+#reviewContainer::-webkit-scrollbar{
+    width:10px;
+}
+
+#reviewContainer::-webkit-scrollbar-track{
+    background:#eee;
+    border-radius:10px;
+}
+
+#reviewContainer::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:10px;
+}
+
+#reviewContainer::-webkit-scrollbar-thumb:hover{
+    background:#1d4ed8;
+}
 }
 
 .review-item{
