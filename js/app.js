@@ -726,38 +726,26 @@ function reviewExam(){
 
         `;
 
-        q.pilihan.forEach(function(opsi,i){
-console.log(
-    "Soal", index + 1,
-    "User:", answers[index],
-    "Benar:", q.benar
-);
-          let cls = "";
+       q.pilihan.forEach(function(opsi,i){
 
-if(i === q.benar){
-    cls = "review-correct";
-}
+    let cls = "";
 
-if(answers[index] === i && i !== q.benar){
-    cls = "review-wrong";
-}
-            html+=`
+    if(i === q.benar){
+        cls = "review-correct";
+    }
 
-            <div class="choice ${cls}">
+    if(answers[index] === i && i !== q.benar){
+        cls = "review-wrong";
+    }
 
-                <b>
+    html += `
+    <div class="choice ${cls}">
+        <b>${String.fromCharCode(65+i)}.</b>
+        ${opsi.text}
+    </div>
+    `;
 
-                ${String.fromCharCode(65+i)}.
-
-                </b>
-
-                ${opsi.text}
-
-            </div>
-
-            `;
-
-        });
+});
 
         html+="<hr></div>";
 
