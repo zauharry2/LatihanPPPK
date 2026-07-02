@@ -775,15 +775,18 @@ function reviewExam(){
    EVENT REVIEW
 ========================================================== */
 
-document.getElementById("reviewBtn").onclick=function(){
+const reviewBtn = document.getElementById("reviewBtn");
 
-    reviewExam();
+if (reviewBtn) {
+    reviewBtn.onclick = function () {
 
-    el.resultPage.style.display="none";
+        reviewExam();
 
-    el.reviewPage.style.display="block";
+        el.resultPage.style.display = "none";
+        el.reviewPage.style.display = "block";
 
-};
+    };
+}
 
 document.getElementById("backResultBtn").onclick=function(){
 
@@ -817,6 +820,16 @@ function restartExam(){
 
 }
 
-document.getElementById("restartBtn").onclick=restartExam;
+const restartBtn = document.getElementById("restartBtn");
+if (restartBtn) restartBtn.onclick = restartExam;
 
-document.getElementById("restartBtn2").onclick=restartExam;
+const restartBtn2 = document.getElementById("restartBtn2");
+if (restartBtn2) restartBtn2.onclick = restartExam;
+
+const backBtn = document.getElementById("backResultBtn");
+if (backBtn) {
+    backBtn.onclick = function () {
+        el.reviewPage.style.display = "none";
+        el.resultPage.style.display = "block";
+    };
+}
