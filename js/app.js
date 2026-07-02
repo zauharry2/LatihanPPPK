@@ -685,6 +685,8 @@ function tampilkanHasil(
     nilai
 ){
 
+    document.querySelector(".container").classList.add("fullscreen");
+
     document.getElementById("sidebar").style.display = "none";
 
     el.examPage.style.display = "none";
@@ -787,7 +789,9 @@ document.getElementById("backResultBtn").onclick=function(){
 ========================================================== */
 
 function restartExam(){
+document.querySelector(".container").classList.remove("fullscreen");
 
+document.getElementById("sidebar").style.display = "block";
     resetExam();
 
     soal = [];
