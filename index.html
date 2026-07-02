@@ -65,6 +65,13 @@
 <button id="restartBtn2">🔄 Latihan Lagi</button>
 </div>
 </div>
+
+  html += `
+<div class="choice ${cls}">
+    <b>${String.fromCharCode(65+i)}.</b>
+    ${opsi.text}
+</div>
+`;
 </main>
 </div>
 <script src="data/banksoal.js"></script>
