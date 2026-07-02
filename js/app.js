@@ -552,7 +552,9 @@ function showFeedback(){
    MULAI LATIHAN
 ========================================================== */
 
-document.getElementById("startBtn").onclick=function(){
+document.getElementById("startBtn").onclick = function(){
+
+    if(examStarted) return;
 
     startExam();
 
