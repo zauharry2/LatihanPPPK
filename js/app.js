@@ -727,7 +727,11 @@ function reviewExam(){
         `;
 
         q.pilihan.forEach(function(opsi,i){
-
+console.log(
+    "Soal", index + 1,
+    "User:", answers[index],
+    "Benar:", q.benar
+);
           let cls = "";
 
 if(i === q.benar){
