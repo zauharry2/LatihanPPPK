@@ -788,13 +788,18 @@ function restartExam(){
 
     resetExam();
 
+    soal = [];
+    answers = [];
+    flags = [];
+    current = 0;
+    examStarted = false;
+
     document.getElementById("sidebar").style.display = "block";
 
     el.resultPage.style.display = "none";
     el.reviewPage.style.display = "none";
     el.examPage.style.display = "block";
 
-    // Kembali ke tampilan awal
     el.question.textContent = 'Tekan tombol "Mulai Latihan" untuk memulai.';
     el.choices.innerHTML = "";
     el.feedback.innerHTML = "";
@@ -814,5 +819,7 @@ function restartExam(){
     el.mode.textContent = "Belajar";
     el.score.textContent = "0";
     el.timer.textContent = "120:00";
-
 }
+
+document.getElementById("restartBtn").onclick = restartExam;
+document.getElementById("restartBtn2").onclick = restartExam;
