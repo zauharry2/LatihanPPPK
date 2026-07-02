@@ -289,3 +289,6 @@ input[type=text]{
     border:2px solid #dc3545;
     color:#721c24;
 }
+.container.fullscreen{
+    grid-template-columns:1fr;
+}
