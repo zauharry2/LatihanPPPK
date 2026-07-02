@@ -728,23 +728,15 @@ function reviewExam(){
 
         q.pilihan.forEach(function(opsi,i){
 
-            let cls="";
+          let cls = "";
 
-            if(i===q.benar){
+if(i === q.benar){
+    cls = "review-correct";
+}
 
-                cls="correct";
-
-            }
-
-            if(
-                answers[index]===i &&
-                i!==q.benar
-            ){
-
-                cls="wrong";
-
-            }
-
+if(answers[index] === i && i !== q.benar){
+    cls = "review-wrong";
+}
             html+=`
 
             <div class="choice ${cls}">
