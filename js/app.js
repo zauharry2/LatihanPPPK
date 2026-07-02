@@ -299,7 +299,11 @@ function updateScore(){
 
     });
 
-    el.score.textContent=nilai;
+   if(mode === "belajar"){
+    el.score.textContent = nilai;
+}else{
+    el.score.textContent = "---";
+}
 
 }
 
@@ -688,7 +692,7 @@ function tampilkanHasil(
     document.querySelector(".container").classList.add("fullscreen");
 
     document.getElementById("sidebar").style.display = "none";
-
+el.score.textContent = nilai;
     el.examPage.style.display = "none";
 
     el.reviewPage.style.display = "none";
