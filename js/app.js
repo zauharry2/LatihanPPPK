@@ -785,35 +785,34 @@ document.getElementById("backResultBtn").onclick=function(){
 ========================================================== */
 
 function restartExam(){
-document.getElementById("sidebar").style.display = "block";
+
     resetExam();
 
-    buildExam();
+    document.getElementById("sidebar").style.display = "block";
 
-    buildGrid();
+    el.resultPage.style.display = "none";
+    el.reviewPage.style.display = "none";
+    el.examPage.style.display = "block";
 
-    renderQuestion();
+    // Kembali ke tampilan awal
+    el.question.textContent = 'Tekan tombol "Mulai Latihan" untuk memulai.';
+    el.choices.innerHTML = "";
+    el.feedback.innerHTML = "";
 
-    startTimer();
+    el.number.textContent = "0 / 90";
+    el.progress.style.width = "0%";
 
-    el.examPage.style.display="block";
+    el.grid.innerHTML = "";
 
-    el.resultPage.style.display="none";
+    document.getElementById("namaInput").value = "";
 
-    el.reviewPage.style.display="none";
+    document.querySelector(
+        'input[name="mode"][value="belajar"]'
+    ).checked = true;
 
-}
+    el.nama.textContent = "Peserta";
+    el.mode.textContent = "Belajar";
+    el.score.textContent = "0";
+    el.timer.textContent = "120:00";
 
-const restartBtn = document.getElementById("restartBtn");
-if (restartBtn) restartBtn.onclick = restartExam;
-
-const restartBtn2 = document.getElementById("restartBtn2");
-if (restartBtn2) restartBtn2.onclick = restartExam;
-
-const backBtn = document.getElementById("backResultBtn");
-if (backBtn) {
-    backBtn.onclick = function () {
-        el.reviewPage.style.display = "none";
-        el.resultPage.style.display = "block";
-    };
 }
