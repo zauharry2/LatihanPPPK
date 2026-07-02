@@ -3,88 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Latihan Soal PPPK Operator Layanan Operasional</title>
+<title>Latihan Soal PPPK</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <header class="topbar">
-  <div>
-    <h2>📘 Latihan Soal PPPK</h2>
-    <small>Operator Layanan Operasional</small>
-  </div>
-
-  <div class="top-info">
-      <div><span>Nama</span><strong id="namaPeserta">Peserta</strong></div>
-      <div><span>Mode</span><strong id="modeText">Belajar</strong></div>
-      <div><span>Nilai</span><strong id="score">0</strong></div>
-      <div><span>Timer</span><strong id="timer">120:00</strong></div>
-  </div>
-</header>
-
-<div class="container">
-
-    <aside class="sidebar">
-
-        <div class="card">
-            <label>Nama Peserta</label>
-            <input id="namaInput" type="text" placeholder="Masukkan nama">
-        </div>
-
-        <div class="card">
-            <label><input type="radio" name="mode" value="belajar" checked> Mode Belajar</label><br>
-            <label><input type="radio" name="mode" value="ujian"> Mode Ujian</label>
-        </div>
-
-        <button id="startBtn">▶ Mulai Latihan</button>
-
-        <hr>
-
-        <h3>Nomor Soal</h3>
-        <div id="questionGrid"></div>
-
-    </aside>
-
-    <main class="content">
-
-        <div class="statusBox">
-            <div><strong id="questionNumber">0 / 90</strong></div>
-
-            <div class="progress">
-                <div id="progressBar"></div>
-            </div>
-
-        </div>
-
-        <section class="questionCard">
-
-            <h3 id="questionText">
-                Tekan tombol "Mulai Latihan" untuk memulai.
-            </h3>
-
-            <div id="choices"></div>
-
-            <div id="feedback"></div>
-
-        </section>
-
-        <div class="navigation">
-
-            <button id="prevBtn">⬅ Sebelumnya</button>
-
-            <button id="nextBtn">Berikutnya ➡</button>
-          <button id="flagBtn">🚩 Ragu-ragu</button>
-
-            <button id="finishBtn">🏁 Selesai</button>
-
-        </div>
-
-    </main>
-
+<div><h2>📘 Latihan Soal PPPK</h2><small>Operator Layanan Operasional</small></div>
+<div class="top-info">
+<div><span>Nama</span><strong id="namaPeserta">Peserta</strong></div>
+<div><span>Mode</span><strong id="modeText">Belajar</strong></div>
+<div><span>Nilai</span><strong id="score">0</strong></div>
+<div><span>Timer</span><strong id="timer">120:00</strong></div>
 </div>
-
+</header>
+<div class="container">
+<aside class="sidebar">
+<div class="card"><label>Nama Peserta</label><input id="namaInput" type="text" placeholder="Masukkan nama"></div>
+<div class="card">
+<label><input type="radio" name="mode" value="belajar" checked> Mode Belajar</label><br>
+<label><input type="radio" name="mode" value="ujian"> Mode Ujian</label>
+</div>
+<button id="startBtn">▶ Mulai Latihan</button>
+<hr><h3>Nomor Soal</h3><div id="questionGrid"></div>
+</aside>
+<main class="content">
+<div id="examPage">
+<div class="statusBox">
+<strong id="questionNumber">0 / 90</strong>
+<div class="progress"><div id="progressBar"></div></div>
+</div>
+<section class="questionCard">
+<h3 id="questionText">Tekan tombol "Mulai Latihan" untuk memulai.</h3>
+<div id="choices"></div>
+<div id="feedback"></div>
+</section>
+<div class="navigation">
+<button id="prevBtn">⬅ Sebelumnya</button>
+<button id="nextBtn">Berikutnya ➡</button>
+<button id="flagBtn">🚩 Ragu-ragu</button>
+<button id="finishBtn">🏁 Selesai</button>
+</div>
+</div>
+<div id="resultPage" style="display:none">
+<h2>🏆 HASIL LATIHAN PPPK</h2>
+<div class="result-card">
+<p><b>Nama :</b> <span id="rNama"></span></p>
+<p><b>Mode :</b> <span id="rMode"></span></p><hr>
+<p>✅ Benar : <span id="rBenar"></span></p>
+<p>❌ Salah : <span id="rSalah"></span></p>
+<p>⬜ Kosong : <span id="rKosong"></span></p><hr>
+<h2>Nilai : <span id="rNilai"></span> / 450</h2>
+<button id="reviewBtn">📖 Review Jawaban</button>
+<button id="restartBtn">🔄 Latihan Lagi</button>
+</div>
+</div>
+<div id="reviewPage" style="display:none">
+<h2>📖 Review Jawaban</h2>
+<div id="reviewContainer"></div>
+<div class="review-action">
+<button id="backResultBtn">⬅ Kembali ke Hasil</button>
+<button id="restartBtn2">🔄 Latihan Lagi</button>
+</div>
+</div>
+</main>
+</div>
 <script src="data/banksoal.js"></script>
 <script src="js/app.js"></script>
-
 </body>
 </html>
