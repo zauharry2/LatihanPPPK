@@ -759,10 +759,7 @@ if(answers[index] === i && i !== q.benar){
 
         });
 
-        html+="<hr></div>";
-
-    });
-
+      
     el.reviewContainer.innerHTML=html;
 
 }
