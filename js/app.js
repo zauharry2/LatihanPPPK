@@ -683,26 +683,26 @@ function tampilkanHasil(
     nilai
 ){
 
-    el.examPage.style.display="none";
+    document.getElementById("sidebar").style.display = "none";
 
-    el.reviewPage.style.display="none";
+    el.examPage.style.display = "none";
 
-    el.resultPage.style.display="block";
+    el.reviewPage.style.display = "none";
 
-    document.getElementById("rNama").textContent=namaPeserta;
+    el.resultPage.style.display = "block";
 
-    document.getElementById("rMode").textContent=
-        mode==="belajar"
-        ?"Belajar"
-        :"Ujian";
+    document.getElementById("rNama").textContent = namaPeserta;
 
-    document.getElementById("rBenar").textContent=benar;
+    document.getElementById("rMode").textContent =
+        mode === "belajar" ? "Belajar" : "Ujian";
 
-    document.getElementById("rSalah").textContent=salah;
+    document.getElementById("rBenar").textContent = benar;
 
-    document.getElementById("rKosong").textContent=kosong;
+    document.getElementById("rSalah").textContent = salah;
 
-    document.getElementById("rNilai").textContent=nilai;
+    document.getElementById("rKosong").textContent = kosong;
+
+    document.getElementById("rNilai").textContent = nilai;
 
 }
 
