@@ -3543,7 +3543,7 @@ behavior:"smooth"
 
 </script>
 
-    <button onclick="toggleSearch()" id="searchBtn">
+   <button onclick="toggleSearch()" id="searchBtn">
 🔍
 </button>
 
@@ -3563,6 +3563,7 @@ Cari
 
 <script>
 
+
 function toggleSearch(){
 
 let box =
@@ -3580,7 +3581,6 @@ box.style.display=="block"
 
 
 
-<script>
 
 function cariMateri(){
 
@@ -3596,17 +3596,10 @@ return;
 }
 
 
-// hapus highlight lama
-document.body.innerHTML =
-document.body.innerHTML.replaceAll(
-"background: yellow;",
-""
-);
-
 
 let semua =
 document.querySelectorAll(
-"h1,h2,h3,p,li,div"
+"h1,h2,h3,h4,p,li"
 );
 
 
@@ -3616,8 +3609,10 @@ let ketemu=false;
 semua.forEach(item=>{
 
 
+item.style.background="";
+
+
 if(
-item.innerText &&
 item.innerText
 .toLowerCase()
 .includes(keyword)
@@ -3629,7 +3624,6 @@ ketemu==false
 item.scrollIntoView({
 
 behavior:"smooth",
-
 block:"center"
 
 });
@@ -3647,6 +3641,7 @@ ketemu=true;
 });
 
 
+
 if(!ketemu){
 
 alert("Materi tidak ditemukan");
@@ -3655,5 +3650,6 @@ alert("Materi tidak ditemukan");
 
 
 }
+
 
 </script>
