@@ -3542,5 +3542,110 @@ behavior:"smooth"
 }
 
 </script>
+
+    <button onclick="toggleSearch()" id="searchBtn">
+🔍
+</button>
+
+
+<div id="searchBox">
+
+<input id="searchInput"
+placeholder="Cari materi...">
+
+<button onclick="cariMateri()">
+Cari
+</button>
+
+</div>
+
+
+
+<script>
+
+function toggleSearch(){
+
+let box =
+document.getElementById("searchBox");
+
+
+box.style.display =
+box.style.display=="block"
+?
+"none"
+:
+"block";
+
+}
+
+
+
+function cariMateri(){
+
+
+let keyword =
+document.getElementById("searchInput")
+.value
+.toLowerCase();
+
+
+
+if(keyword==""){
+return;
+}
+
+
+
+let bab =
+document.querySelectorAll(".bab");
+
+
+let ketemu=false;
+
+
+
+bab.forEach(item=>{
+
+
+item.style.background="white";
+
+
+if(
+item.innerText.toLowerCase().includes(keyword)
+&&
+ketemu==false
+){
+
+
+item.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+
+item.style.background="#fef9c3";
+
+
+ketemu=true;
+
+
+}
+
+
+});
+
+
+
+if(!ketemu){
+
+alert("Materi tidak ditemukan");
+
+}
+
+
+}
+
+</script>
 </body>
 </html>
