@@ -798,7 +798,7 @@ document.getElementById("backResultBtn").onclick=function(){
 ========================================================== */
 
 function restartExam(){
-
+document.body.classList.remove("examStarted");
     resetExam();
 
     soal = [];
