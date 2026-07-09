@@ -173,7 +173,7 @@ function formatTime(sec){
 ========================================================== */
 
 function startExam(){
-
+document.body.classList.add("examStarted");
     if(typeof BANK_SOAL==="undefined"){
 
         alert("BANK_SOAL belum dimuat.");
