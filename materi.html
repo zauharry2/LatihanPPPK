@@ -3580,14 +3580,15 @@ box.style.display=="block"
 
 
 
-function cariMateri(){
+<script>
 
+function cariMateri(){
 
 let keyword =
 document.getElementById("searchInput")
 .value
-.toLowerCase();
-
+.toLowerCase()
+.trim();
 
 
 if(keyword==""){
@@ -3595,23 +3596,31 @@ return;
 }
 
 
+// hapus highlight lama
+document.body.innerHTML =
+document.body.innerHTML.replaceAll(
+"background: yellow;",
+""
+);
 
-let bab =
-document.querySelectorAll(".bab");
+
+let semua =
+document.querySelectorAll(
+"h1,h2,h3,p,li,div"
+);
 
 
 let ketemu=false;
 
 
-
-bab.forEach(item=>{
-
-
-item.style.background="white";
+semua.forEach(item=>{
 
 
 if(
-item.innerText.toLowerCase().includes(keyword)
+item.innerText &&
+item.innerText
+.toLowerCase()
+.includes(keyword)
 &&
 ketemu==false
 ){
@@ -3619,12 +3628,14 @@ ketemu==false
 
 item.scrollIntoView({
 
-behavior:"smooth"
+behavior:"smooth",
+
+block:"center"
 
 });
 
 
-item.style.background="#fef9c3";
+item.style.background="yellow";
 
 
 ketemu=true;
@@ -3634,7 +3645,6 @@ ketemu=true;
 
 
 });
-
 
 
 if(!ketemu){
@@ -3647,5 +3657,3 @@ alert("Materi tidak ditemukan");
 }
 
 </script>
-</body>
-</html>
