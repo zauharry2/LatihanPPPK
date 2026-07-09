@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login PPPK</title>
 
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#2563eb;
+font-family:Arial;
+}
+
+.box{
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+width:300px;
+}
+
+input{
+width:90%;
+padding:10px;
+margin:8px;
+}
+
+button{
+padding:10px 30px;
+background:#16a34a;
+color:white;
+border:0;
+border-radius:8px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div class="box">
+
+<h2>🔐 Login PPPK</h2>
+
+<input id="user" placeholder="Username">
+
+<input id="pass" 
+type="password"
+placeholder="Password">
+
+<br>
+
+<button onclick="login()">Masuk</button>
+
+<p id="msg"></p>
+
+</div>
+
+
+
+<script>
+
+function login(){
+
+let u=document.getElementById("user").value;
+let p=document.getElementById("pass").value;
+
+
+if(u=="admin" && p=="pppk2026"){
+
+sessionStorage.setItem("akses","ok");
+
+window.location="index.html";
+
+}
+
+else{
+
+document.getElementById("msg").innerHTML=
+"❌ Login salah";
+
+}
+
+}
+
+</script>
+
+
+</body>
+</html>
