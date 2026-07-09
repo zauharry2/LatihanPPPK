@@ -98,15 +98,31 @@ window.location="login.html";
 </div>
 <script src="data/banksoal.js"></script>
 <script src="js/app.js"></script>
- <script>
+<script>
+
+
+let namaLogin = sessionStorage.getItem("user");
+
+
+if(namaLogin){
+
+document.getElementById("loginUser").innerHTML =
+namaLogin;
+
+}
+
+
 
 function logout(){
 
 sessionStorage.removeItem("akses");
 
+sessionStorage.removeItem("user");
+
 window.location="login.html";
 
 }
+
 
 </script>
 </body>
