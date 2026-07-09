@@ -36,30 +36,38 @@ color:white;
 border:0;
 border-radius:8px;
 }
-/* =================
-   MOBILE LOGIN
-================= */
+/* ===== LOGIN MOBILE ===== */
 
-@media(max-width:600px){
-
+@media screen and (max-width:600px){
 
 body{
 
-padding:20px;
-box-sizing:border-box;
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:0 20px;
+
+background:#2563eb;
 
 }
 
 
 .box{
 
-width:100%;
+width:100% !important;
 
-max-width:330px;
+max-width:360px !important;
 
-padding:25px 20px;
+padding:35px 25px !important;
 
-border-radius:18px;
+box-sizing:border-box;
+
+border-radius:20px;
 
 }
 
@@ -75,19 +83,19 @@ margin-bottom:25px;
 
 input{
 
-width:100%;
+display:block;
 
-box-sizing:border-box;
+width:100% !important;
+
+height:45px;
 
 font-size:16px;
 
-padding:14px;
+padding:10px;
 
-margin:10px 0;
+margin:12px 0;
 
-border-radius:8px;
-
-border:1px solid #ccc;
+box-sizing:border-box;
 
 }
 
@@ -96,13 +104,11 @@ button{
 
 width:100%;
 
-padding:14px;
+height:45px;
 
 font-size:16px;
 
 font-weight:bold;
-
-margin-top:10px;
 
 }
 
