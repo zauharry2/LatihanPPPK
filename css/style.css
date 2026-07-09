@@ -666,3 +666,29 @@ font-size:16px;
 
 
 }
+/* Nomor soal versi HP */
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(10,1fr);
+
+gap:6px;
+
+}
+
+
+.grid button{
+
+width:32px;
+
+height:32px;
+
+font-size:13px;
+
+border-radius:6px;
+
+padding:0;
+
+}
