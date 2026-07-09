@@ -66,31 +66,89 @@ placeholder="Password">
 
 <script>
 
+
+const users = [
+
+{
+username:"admin",
+password:"pppk2026"
+},
+
+{
+username:"aj",
+password:"12345"
+},
+
+{
+username:"teman1",
+password:"latihan123"
+},
+
+{
+username:"peserta",
+password:"cat2026"
+}
+
+];
+
+
+
 function login(){
 
+
 let u=document.getElementById("user").value;
+
 let p=document.getElementById("pass").value;
 
 
-if(u=="admin" && p=="pppk2026"){
 
-sessionStorage.setItem("akses","ok");
+let cek = users.find(
+
+data =>
+
+data.username === u &&
+
+data.password === p
+
+);
+
+
+
+if(cek){
+
+
+sessionStorage.setItem(
+"akses",
+"ok"
+);
+
+
+sessionStorage.setItem(
+"user",
+u
+);
+
 
 window.location="index.html";
 
+
 }
+
 
 else{
 
-document.getElementById("msg").innerHTML=
-"❌ Login salah";
+
+document.getElementById("msg").innerHTML =
+"❌ Username atau Password salah";
+
 
 }
 
+
 }
+
 
 </script>
-
 
 </body>
 </html>
