@@ -292,3 +292,14 @@ input[type=text]{
 .container.fullscreen{
     grid-template-columns:1fr;
 }
+.materi-btn{
+ display:block;
+ background:#2563eb;
+ color:white;
+ padding:12px;
+ margin-top:10px;
+ border-radius:8px;
+ text-align:center;
+ text-decoration:none;
+ font-weight:bold;
+}
