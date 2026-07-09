@@ -756,3 +756,29 @@ font-size:12px !important;
 
 
 }
+/* MODE HP SAAT LATIHAN */
+
+@media(max-width:700px){
+
+.examStarted .card:nth-child(1),
+.examStarted .card:nth-child(2),
+.examStarted #startBtn,
+.examStarted .materi-btn{
+
+display:none !important;
+
+}
+
+.sidebar{
+
+margin-top:10px !important;
+
+}
+
+#questionGrid{
+
+margin-top:5px !important;
+
+}
+
+}
