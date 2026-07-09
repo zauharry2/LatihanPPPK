@@ -3596,11 +3596,8 @@ return;
 }
 
 
-
 let semua =
-document.querySelectorAll(
-"h1,h2,h3,h4,p,li"
-);
+document.querySelectorAll("body *");
 
 
 let ketemu=false;
@@ -3613,17 +3610,26 @@ item.style.background="";
 
 
 if(
+
+item.children.length==0 &&
+
+item.innerText &&
+
 item.innerText
 .toLowerCase()
 .includes(keyword)
+
 &&
+
 ketemu==false
+
 ){
 
 
 item.scrollIntoView({
 
 behavior:"smooth",
+
 block:"center"
 
 });
@@ -3650,6 +3656,3 @@ alert("Materi tidak ditemukan");
 
 
 }
-
-
-</script>
