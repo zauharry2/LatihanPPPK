@@ -173,7 +173,7 @@ function formatTime(sec){
 ========================================================== */
 
 function startExam(){
-document.body.classList.add("examStarted");
+
     if(typeof BANK_SOAL==="undefined"){
 
         alert("BANK_SOAL belum dimuat.");
@@ -198,6 +198,7 @@ document.body.classList.add("examStarted");
         "input[name=mode]:checked"
     ).value;
 
+
     resetExam();
 
     buildExam();
@@ -209,7 +210,13 @@ document.body.classList.add("examStarted");
         ? "Belajar"
         : "Ujian";
 
+
     examStarted = true;
+
+
+    // PINDAH TAMPILAN MOBILE SETELAH MULAI
+    document.body.classList.add("examStarted");
+
 
 }
 /* ==========================================================
