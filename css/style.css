@@ -692,3 +692,93 @@ border-radius:6px;
 padding:0;
 
 }
+/* =========================
+   MOBILE CAT FINAL FIX
+========================= */
+
+@media(max-width:700px){
+
+
+.container{
+
+display:flex !important;
+flex-direction:column !important;
+
+}
+
+
+/* AWAL MASUK:
+MENU LATIHAN DI ATAS */
+
+.sidebar{
+
+order:1 !important;
+width:100% !important;
+
+}
+
+
+.content{
+
+order:2 !important;
+width:100% !important;
+padding:10px !important;
+
+}
+
+
+/* SETELAH MULAI:
+SOAL NAIK KE ATAS */
+
+body.examStarted .content{
+
+order:1 !important;
+
+}
+
+
+body.examStarted .sidebar{
+
+order:2 !important;
+
+}
+
+
+/* HILANGKAN MENU SETELAH MULAI */
+
+body.examStarted .sidebar .card,
+body.examStarted #startBtn,
+body.examStarted .materi-btn{
+
+display:none !important;
+
+}
+
+
+/* NOMOR SOAL */
+
+#questionGrid{
+
+display:grid !important;
+
+grid-template-columns:repeat(10,1fr) !important;
+
+gap:5px !important;
+
+}
+
+
+#questionGrid button{
+
+width:30px !important;
+
+height:30px !important;
+
+font-size:12px !important;
+
+padding:0 !important;
+
+}
+
+
+}
