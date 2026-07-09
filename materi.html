@@ -3582,6 +3582,11 @@ box.style.display=="block"
 
 
 
+let hasilCari = [];
+let posisiCari = 0;
+let kataTerakhir = "";
+
+
 function cariMateri(){
 
 let keyword =
@@ -3597,36 +3602,80 @@ return;
 
 
 let semua =
-document.querySelectorAll("body *");
+document.querySelectorAll(
+"p,h1,h2,h3,h4,li,div,span,b"
+);
 
 
-let ketemu=false;
+
+/* kalau kata pencarian baru */
+
+if(keyword !== kataTerakhir){
+
+
+hasilCari = [];
+
+posisiCari = 0;
+
+kataTerakhir = keyword;
+
+
+
+semua.forEach(item=>{
+
+item.style.background="";
+
+});
+
 
 
 semua.forEach(item=>{
 
 
-item.style.background="";
-
-
 if(
-
-item.children.length==0 &&
-
 item.innerText &&
-
 item.innerText
 .toLowerCase()
 .includes(keyword)
-
-&&
-
-ketemu==false
-
 ){
 
 
-item.scrollIntoView({
+hasilCari.push(item);
+
+item.style.background="#fff176";
+
+
+}
+
+
+});
+
+
+}
+
+
+
+if(hasilCari.length > 0){
+
+
+// reset warna hasil
+
+hasilCari.forEach(item=>{
+
+item.style.background="#fff176";
+
+});
+
+
+
+// hasil aktif lebih terang
+
+hasilCari[posisiCari].style.background="#ff9800";
+
+
+
+hasilCari[posisiCari]
+.scrollIntoView({
 
 behavior:"smooth",
 
@@ -3635,25 +3684,29 @@ block:"center"
 });
 
 
-item.style.background="yellow";
+
+// pindah index berikutnya
+
+posisiCari++;
 
 
-ketemu=true;
+if(posisiCari >= hasilCari.length){
 
+posisiCari = 0;
 
 }
 
 
-});
 
+}
 
+else{
 
-if(!ketemu){
 
 alert("Materi tidak ditemukan");
 
+
 }
 
 
 }
-</script>
