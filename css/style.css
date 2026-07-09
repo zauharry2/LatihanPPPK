@@ -756,29 +756,86 @@ font-size:12px !important;
 
 
 }
-/* MODE HP SAAT LATIHAN */
+/* ====================
+   MOBILE CAT FIX FINAL
+==================== */
 
 @media(max-width:700px){
 
-.examStarted .card:nth-child(1),
-.examStarted .card:nth-child(2),
-.examStarted #startBtn,
-.examStarted .materi-btn{
+.container{
+
+display:flex !important;
+flex-direction:column !important;
+
+}
+
+
+/* awal masuk */
+.sidebar{
+
+order:1 !important;
+width:100% !important;
+
+}
+
+.main{
+
+order:2 !important;
+width:100% !important;
+
+}
+
+
+/* setelah mulai latihan */
+
+body.examStarted .main{
+
+order:1 !important;
+
+}
+
+
+body.examStarted .sidebar{
+
+order:2 !important;
+
+}
+
+
+/* sembunyikan setting setelah mulai */
+
+body.examStarted .sidebar .card,
+body.examStarted #startBtn,
+body.examStarted .materi-btn{
 
 display:none !important;
 
 }
 
-.sidebar{
 
-margin-top:10px !important;
+/* tapi nomor soal tetap muncul */
+
+body.examStarted #questionGrid{
+
+display:grid !important;
 
 }
+
 
 #questionGrid{
 
-margin-top:5px !important;
+grid-template-columns:repeat(10,1fr) !important;
+gap:5px !important;
 
 }
+
+#questionGrid button{
+
+width:32px !important;
+height:32px !important;
+font-size:12px !important;
+
+}
+
 
 }
