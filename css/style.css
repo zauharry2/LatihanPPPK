@@ -826,3 +826,73 @@ z-index:9999;
 background:#1e40af;
 
 }
+<style>
+    /* ==========================================================================
+       CSS UTAMA (UNTUK DEKSTOP / LAYAR BESAR)
+       ========================================================================== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, Helvetica, sans-serif; background: #f4f6fb; color: #222; line-height: 1.6; padding: 20px; }
+    .materi-container { max-width: 900px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    
+    .header { text-align: center; margin-bottom: 30px; border-bottom: 2px solid #2563eb; padding-bottom: 15px; }
+    .header h1 { color: #2563eb; font-size: 26px; }
+    .header p { color: #555; font-size: 14px; margin-top: 5px; }
+    
+    .back-btn { display: inline-block; margin-bottom: 20px; color: #2563eb; text-decoration: none; font-weight: bold; }
+    
+    .bab-section { margin-bottom: 40px; border-bottom: 1px dashed #ccc; padding-bottom: 30px; }
+    .bab-section:last-child { border-bottom: none; }
+    .bab-title { background: #2563eb; color: #fff; padding: 12px 18px; border-radius: 6px; margin-bottom: 20px; font-size: 18px; font-weight: bold; }
+    
+    .sub-materi { margin-bottom: 25px; }
+    .sub-materi h4 { color: #1e40af; margin-bottom: 8px; font-size: 16px; border-left: 4px solid #2563eb; padding-left: 8px; }
+    .sub-materi p { text-align: justify; margin-bottom: 10px; }
+    .sub-materi ul, .sub-materi ol { margin-left: 25px; margin-bottom: 10px; }
+    .sub-materi li { margin-bottom: 5px; }
+    
+    /* Box Bank Soal Per Bab */
+    .soal-box { background: #f8f9fc; border: 1px solid #e3e6ef; border-radius: 8px; padding: 20px; margin-top: 25px; }
+    .soal-box h4 { color: #0f172a; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; margin-bottom: 15px; font-size: 16px; }
+    
+    .soal-item { margin-bottom: 20px; background: #fff; padding: 15px; border-radius: 6px; border: 1px solid #cbd5e1; }
+    .soal-item:last-child { margin-bottom: 0; }
+    .question { font-weight: bold; margin-bottom: 10px; color: #1e293b; }
+    .choices { margin-left: 0px; margin-bottom: 12px; }
+    
+    /* Pilihan ganda dibuat mirip box tombol agar mudah di-tap di HP */
+    .choice-item { margin-bottom: 8px; padding: 10px 14px; border: 1px solid #cfd6e4; border-radius: 6px; background: #fafafa; font-size: 14px; }
+    
+    /* Tombol Kunci dibuat full width agar mudah ditekan jempol di HP */
+    .answer-btn { background: #2563eb; color: #fff; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: bold; width: 100%; text-align: center; transition: 0.2s; }
+    .answer-btn:hover { background: #1e40af; }
+    
+    .kunci-jawaban { display: none; margin-top: 12px; padding: 15px; border-radius: 6px; font-size: 14px; background: #dcfce7; border-left: 4px solid #16a34a; color: #14532d; }
+    .kunci-jawaban strong { color: #15803d; }
+    .kunci-jawaban p { margin-top: 5px; text-align: justify; }
+
+    /* ==========================================================================
+       MEDIA QUERY: OTOMATIS AKTIF SAAT DIBUKA DI HP (MAKSIMAL LEBAR 700PX)
+       ========================================================================== */
+    @media (max-width: 700px) {
+        body { padding: 10px; font-size: 15px; }
+        
+        /* Mengurangi margin kontainer utama agar memanfaatkan lebar layar HP secara maksimal */
+        .materi-container { padding: 16px; border-radius: 8px; }
+        
+        /* Mengecilkan ukuran header agar tulisan bab tidak patah berantakan */
+        .header h1 { font-size: 20px; }
+        .header p { font-size: 12px; }
+        
+        .bab-title { font-size: 15px; padding: 10px 12px; margin-bottom: 15px; line-height: 1.4; }
+        .sub-materi h4 { font-size: 15px; }
+        .sub-materi ul, .sub-materi ol { margin-left: 20px; }
+        
+        /* Optimasi area soal untuk sentuhan jari */
+        .soal-box { padding: 12px; margin-top: 15px; }
+        .soal-item { padding: 12px; }
+        .choice-item { font-size: 13px; padding: 10px 12px; line-height: 1.4; }
+        
+        /* Tombol dibuat lebih tebal untuk kenyamanan jari mobile */
+        .answer-btn { padding: 12px; font-size: 14px; }
+    }
+</style>
