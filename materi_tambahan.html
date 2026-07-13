@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Materi Tambahan & Bank Soal - Operator Layanan Operasional</title>
@@ -41,6 +42,13 @@
         .kunci-jawaban { display: none; margin-top: 12px; padding: 15px; border-radius: 6px; font-size: 14px; background: #dcfce7; border-left: 4px solid #16a34a; color: #14532d; }
         .kunci-jawaban strong { color: #15803d; }
         .kunci-jawaban p { margin-top: 5px; text-align: justify; }
+
+        <!-- TAMBAHKAN SCRIPT PROTEKSI LOGIN INI -->
+    <script>
+        if (sessionStorage.getItem("akses") !== "ok") {
+            window.location = "login.html";
+        }
+    </script>
     </style>
 </head>
 <body>
